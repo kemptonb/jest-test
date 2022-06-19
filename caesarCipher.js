@@ -14,26 +14,33 @@ function caesarCipher(str) {
         result += letter;
     }
 
+    let checkSpaces = (letter) => {
+        if (typeof letter === 'string' && letter.trim().length === 0) {
+            result += letter;
+        } 
+    }
+
     let matchStrings = (letter) => {
         alpha.forEach(element => {
             if (element === letter) { cipherLetter(element, letter) };
         });
     }
 
-    let checkSpaces = (letter) => {
-        if (typeof letter === 'string' && letter.trim().length === 0) {
+    let checkNumbers = (letter) => {
+        if (typeof parseInt(letter) === 'number' && isNaN(parseInt(letter)) === false) {
             result += letter;
         }
     }
 
-    let checkNumbers = (letter) => {
-        if (typeof parseInt(letter) === 'number') {
-           
+    let checkPunct = (letter) => {
+        if (typeof parseInt(letter) === 'number' && isNaN(parseInt(letter)) === false) {
+            result += letter;
         }
     }
 
     str.split('').forEach(letter => {
         checkNumbers(letter);
+        //checkPunct(letter);
         checkSpaces(letter);
         matchStrings(letter);
     });
