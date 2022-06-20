@@ -33,14 +33,13 @@ function caesarCipher(str) {
     }
 
     let checkPunct = (letter) => {
-        if (typeof parseInt(letter) === 'number' && isNaN(parseInt(letter)) === false) {
-            result += letter;
-        }
+        let regex = /[!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~]/g;
+        if(letter.match(regex)){result += letter}
     }
 
     str.split('').forEach(letter => {
         checkNumbers(letter);
-        //checkPunct(letter);
+        checkPunct(letter);
         checkSpaces(letter);
         matchStrings(letter);
     });

@@ -24,6 +24,14 @@ test('return num without num shift and with letters', () => {
     expect(caesarCipher("a1b2c3")).toBe("b1c2d3");
 });
 
+test('test punct', () => {
+    expect(caesarCipher("a'bc")).toBe("b'cd");
+});
+
+test('test punct', () => {
+    expect(caesarCipher("a'b#c%^&&")).toBe("b'c#d%^&&");
+});
+
 // test('shift alphabet', () => {
 //     expect(caesarCipher("abcdefghijklmnopqrstuvwxyz")).toBe("bcdefghijklmnopqrstuvwxyza");
 // });
