@@ -32,10 +32,6 @@ test('test punct', () => {
     expect(caesarCipher("a'b#c%^&&")).toBe("b'c#d%^&&");
 });
 
-// test('shift alphabet', () => {
-//     expect(caesarCipher("abcdefghijklmnopqrstuvwxyz")).toBe("bcdefghijklmnopqrstuvwxyza");
-// });
-
 test('return letter case', () => {
     expect(caesarCipher("ABC")).toBe("BCD");
 });
@@ -43,3 +39,7 @@ test('return letter case', () => {
 test('return letter case', () => {
     expect(caesarCipher("AbCd")).toBe("BcDe");
 });
+
+// test('shift alphabet', () => {
+//     expect(caesarCipher("abcdefghijklmnopqrstuvwxyz")).toBe("bcdefghijklmnopqrstuvwxyza");
+// });

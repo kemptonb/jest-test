@@ -5,6 +5,7 @@ function caesarCipher(str) {
         "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"
     ]
 
+    //letters shifted by index num
     let index = 1;
     var result = '';
 
@@ -34,7 +35,7 @@ function caesarCipher(str) {
 
     let matchStrings = (letter) => {
         alpha.forEach(element => {
-            if (element === letter.toLowerCase()) { cipherLetter(element, letter) };
+            if (element === letter.toLowerCase()) {cipherLetter(element, letter) };
         });
     }
 
@@ -57,9 +58,6 @@ function caesarCipher(str) {
     });
 
     return result;
-
 }
-
-
 
 module.exports = caesarCipher;
