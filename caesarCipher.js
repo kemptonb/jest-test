@@ -21,7 +21,7 @@ function caesarCipher(str) {
 
     let cipherLetter = (element, letter) => {
         let letterCase = checkCase(letter, letterCase);
-        let letterIndex = alpha.indexOf(element) + index;
+        let letterIndex = [alpha.indexOf(element) + index] % 26;
         letter = alpha[letterIndex];
         letter = changeCase(letter, letterCase);
         result += letter;

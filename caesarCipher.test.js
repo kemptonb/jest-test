@@ -40,6 +40,6 @@ test('return letter case', () => {
     expect(caesarCipher("AbCd")).toBe("BcDe");
 });
 
-// test('shift alphabet', () => {
-//     expect(caesarCipher("abcdefghijklmnopqrstuvwxyz")).toBe("bcdefghijklmnopqrstuvwxyza");
-// });
+test('shift alphabet', () => {
+    expect(caesarCipher("abcdefghijklmnopqrstuvwxyz")).toBe("bcdefghijklmnopqrstuvwxyza");
+});
