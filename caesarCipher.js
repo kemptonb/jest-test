@@ -8,9 +8,21 @@ function caesarCipher(str) {
     let index = 1;
     var result = '';
 
+    let checkCase = (letter, letterCase)=> {
+        letter.toUpperCase() === letter ? letterCase = "upper": letterCase = "lower"
+        return letterCase;
+    }
+
+    let changeCase = (letter, letterCase)=> {
+        letterCase === "upper" ? letter = letter.toUpperCase() : letter = letter.toLowerCase() 
+        return letter
+    }
+
     let cipherLetter = (element, letter) => {
+        let letterCase = checkCase(letter, letterCase);
         let letterIndex = alpha.indexOf(element) + index;
         letter = alpha[letterIndex];
+        letter = changeCase(letter, letterCase);
         result += letter;
     }
 
@@ -22,7 +34,7 @@ function caesarCipher(str) {
 
     let matchStrings = (letter) => {
         alpha.forEach(element => {
-            if (element === letter) { cipherLetter(element, letter) };
+            if (element === letter.toLowerCase()) { cipherLetter(element, letter) };
         });
     }
 

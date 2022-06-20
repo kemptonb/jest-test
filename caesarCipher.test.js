@@ -36,6 +36,10 @@ test('test punct', () => {
 //     expect(caesarCipher("abcdefghijklmnopqrstuvwxyz")).toBe("bcdefghijklmnopqrstuvwxyza");
 // });
 
-// test('return letter case', () => {
-//     expect(caesarCipher("ABC")).toBe("BCD");
-// });
+test('return letter case', () => {
+    expect(caesarCipher("ABC")).toBe("BCD");
+});
+
+test('return letter case', () => {
+    expect(caesarCipher("AbCd")).toBe("BcDe");
+});
