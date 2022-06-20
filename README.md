@@ -13,6 +13,6 @@ Tests include:
 4. A caesarCipher function that takes a string and returns it with each character “shifted”. Read more about how a Caesar cipher works on this website: http://practicalcryptography.com/ciphers/caesar-cipher/.
 
 A. Tests wrapping from z to a
-B.Tests case
+B. Tests case
 C. Tests punctuation
 
