@@ -16,3 +16,4 @@ A. Tests wrapping from z to a
 B. Tests case
 C. Tests punctuation
 
+5. analyzeArray function that takes an array and returns and object of min, max, avg, and length. 
